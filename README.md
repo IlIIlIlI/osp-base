@@ -11,4 +11,5 @@ Oberstufen Projekt Basis
 
 ### How to Work:
 - The project workfolders are found in "../public/assets" and should keep the given folderstructure.
+- Files of the same type can be added freely into the right folders. html into markup, js into js, php into php etc.
 - Keep the Gruntwatcher running in a terminal session (use "make w" for startup if not started) while working.
