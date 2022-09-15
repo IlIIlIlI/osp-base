@@ -5,6 +5,40 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-.h1 {
-font-family: Verdana;
+// Stylings
+
+// GSO Blue: #5b9bd5
+// GSO Gray: #a4a3a3
+
+body {
+  background-color: #a4a3a3;
 }
+
+#inner-frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 475px;
+  width: 600px;
+
+  background-color: #ffffff;
+  border-radius: 25px;
+
+  #content-box {
+    margin: 25px;
+  }
+
+  .content-headline {
+    float: right;
+    font-family: "DIN Alternate";
+    font-style: italic;
+    color: #5b9bd5;
+  }
+
+  #logo-gso {
+    width: 125px;
+  }
+}
+
