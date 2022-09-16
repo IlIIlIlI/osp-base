@@ -8,7 +8,11 @@
 // Stylings
 
 // GSO Blue: #5b9bd5
-// GSO Gray: #a4a3a3
+// GSO Lightgray: #a4a3a3
+// GSO Darkgray: #2e2e2e
+// GSO Font: Verdana
+
+
 
 body {
   background-color: #a4a3a3;
@@ -31,10 +35,21 @@ body {
   }
 
   .content-headline {
+
     float: right;
-    font-family: "DIN Alternate";
+    font-family: "Verdana";
     font-style: italic;
-    color: #5b9bd5;
+    text-align: right;
+    line-height: 0px;
+
+    h1 {
+      color: #2e2e2e;
+      font-size: 18pt;
+    }
+    p {
+      color: #a4a3a3;
+      font-size: 8pt;
+    }
   }
 
   #logo-gso {
