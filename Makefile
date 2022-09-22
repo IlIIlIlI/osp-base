@@ -1,8 +1,8 @@
 # Project Initiation:
 init:
 	@make d-rm
-	@make d-compose
 	@make dependencies
+	@make d-compose
 	@make start
 
 start:
@@ -14,6 +14,10 @@ start:
 
 stop:
 	@docker-compose stop
+
+restart:
+	@docker-compose stop
+	@make start
 
 
 # Connect:
@@ -63,7 +67,5 @@ d-rm:
 
 # Dependencies:
 dependencies:
-	cd public; npm update; cd ..
-	cd public; npm audit fix; cd ..
-	cd public; npm install; cd ..
+	cd public; npm update; npm audit fix; npm install; cd ..
 	@docker-compose exec -w /var/www/web www sh -c "composer install"

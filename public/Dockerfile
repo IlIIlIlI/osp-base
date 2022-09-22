@@ -20,7 +20,6 @@ RUN apt-get install vim -y
 RUN apt-get install curl -y
 RUN apt-get install git -y
 RUN apt-get install ca-certificates -y
-RUN apt-get install sendmail -y
 
 # install composer
 RUN curl -s https://getcomposer.org/installer | php

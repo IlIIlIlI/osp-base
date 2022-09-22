@@ -5,6 +5,49 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-.h1 {
-font-family: Verdana;
+// Stylings
+
+// GSO Blue: #5b9bd5
+// GSO Lightgray: #a4a3a3
+// GSO Darkgray: #2e2e2e
+// GSO Font: Verdana
+
+// General
+body {
+  background-color: #a4a3a3;
+
+  #inner-frame {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #ffffff;
+    border-radius: 50px;
+
+    #content-box {
+      margin: 25px;
+    }
+
+    .content-headline {
+      float: right;
+      font-family: "Verdana";
+      font-style: italic;
+      text-align: right;
+      line-height: 0px;
+
+      h1 {
+        color: #2e2e2e;
+        font-size: 18pt;
+      }
+      p {
+        color: #a4a3a3;
+        font-size: 8pt;
+      }
+
+      #inner-frame #logo-gso {
+        width: 125px;
+      }
+    }
+  }
 }
