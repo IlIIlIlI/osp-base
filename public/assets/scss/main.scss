@@ -12,6 +12,7 @@
 // GSO Darkgray: #2e2e2e
 // GSO Font: Verdana
 
+// General
 body {
   background-color: #a4a3a3;
 
@@ -43,16 +44,11 @@ body {
         color: #a4a3a3;
         font-size: 8pt;
       }
-  }
-}
 
-#inner-frame {
-  height: 475px;
-  width: 600px;
-  }
-
-  #logo-gso {
-    width: 125px;
+      #inner-frame #logo-gso {
+        width: 125px;
+      }
+    }
   }
 }
 
