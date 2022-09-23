@@ -42,7 +42,7 @@ module.exports = function(grunt) {
             dist: {
                 files: [
                     // PHP Unminified
-                    {src: ['assets/php/index.php'], dest: '../www/web/php/index.php'},
+                    {src: ['assets/php/*.php'], dest: '../www/web/php/index.php'},
                     // Bootstrap
                     {src: ['node_modules/bootstrap/dist/css/bootstrap.min.css'], dest: '../www/web/styling/vendor/bootstrap.min.css'},
                     {src: ['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'], dest: '../www/web/js/vendor/bootstrap.bundle.min.js'},
