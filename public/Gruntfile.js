@@ -110,7 +110,7 @@ module.exports = function(grunt) {
             // Uglify all SCSS after every Change
             scss: {
                 files: ['assets/scss/**/*.scss'],
-                tasks: ['sass:dist', 'cssmin'],
+                tasks: ['concat:dist', 'sass:dist', 'cssmin'],
                 options: {
                     debounceDelay: 1000,
                     spawn: false,
