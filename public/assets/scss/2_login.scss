@@ -7,11 +7,24 @@
 
 // Log-In
 #inner-frame {
-  height: 475px;
   width: 400px;
 
-  #logo-gso {
-    width: 125px;
+  #content-head {
+
+    #logo-gso {
+      width: 125px;
+    }
+
+    #main-headline {
+      margin-top: 5px;
+
+      h1 {
+        font-size: 16pt;
+      }
+
+      p {
+        font-size: 8pt;
+      }
+    }
   }
 }
-

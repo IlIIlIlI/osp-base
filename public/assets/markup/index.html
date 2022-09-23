@@ -14,14 +14,16 @@
     </head>
     <body>
         <div id="inner-frame" class="container-fluid">
-            <div id="content-box" >
+            <div id="content-head">
                 <img id="logo-gso" src="https://www.gso-koeln.de/wp-content/uploads/2020/06/cropped-LOGO-GSO_neu.png">
-                <div class="content-headline">
+                <div id="main-headline">
                     <h1>Quizzes</h1>
-                    <p>GSO NAP Application</p>
+                    <p>GSO NPA Application</p>
                 </div>
+            </div>
 
-                <form>
+            <div id="content-main">
+                <form class="login-signup">
                     <div class="form-group">
                         <label for="exampleInputEmail1">GSO address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -36,7 +38,7 @@
                         <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     </div>
                     <button type="submit" class="btn btn-primary">Sign In</button>
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                    <a class="btn btn-outline-secondary float-right" href="#" role="button">Sign Up</a>
                 </form>
             </div>
         </div>
