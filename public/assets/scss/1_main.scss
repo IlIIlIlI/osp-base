@@ -46,7 +46,7 @@ body {
     border-radius: 25px;
 
     #content-head {
-      margin: 15px;
+      margin: 10px 15px 25px 15px;
       #main-headline {
         float: right;
         font-style: italic;
@@ -56,10 +56,6 @@ body {
           color: #a4a3a3;
         }
       }
-    }
-
-    #content-main {
-      margin: 15px;
     }
   }
 }
