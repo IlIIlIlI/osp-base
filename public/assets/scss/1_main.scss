@@ -1,9 +1,9 @@
 // SCSS Imports
 
 // Bootstrap Import
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../../public/node_modules/bootstrap/scss/mixins";
+@import "../../../public/node_modules/bootstrap/scss/functions";
+@import "../../../public/node_modules/bootstrap/scss/variables";
 
 // Stylings
 
@@ -28,6 +28,9 @@ body {
     #content-box {
       margin: 25px;
     }
+    #logo-gso {
+      width: 250px;
+    }
 
     .content-headline {
       float: right;
@@ -43,10 +46,6 @@ body {
       p {
         color: #a4a3a3;
         font-size: 8pt;
-      }
-
-      #inner-frame #logo-gso {
-        width: 125px;
       }
     }
   }

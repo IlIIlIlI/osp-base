@@ -3,18 +3,6 @@ module.exports = function(grunt) {
     // Task Configuration:
     grunt.initConfig({
 
-        // Make SASS into CSS and move it to WWW
-        sass: {
-            dist: {
-                options: {
-                    style: 'expanded'
-                },
-                files: {
-                    '../www/web/styling/main.css': 'assets/scss/main.scss',
-                }
-            }
-        },
-
         // Give JavaScript Cross-Browser-Compatibility
         babel: {
             options: {
@@ -28,6 +16,27 @@ module.exports = function(grunt) {
             }
         },
 
+        // Make SASS into CSS and move it to WWW
+        concat: {
+            dist: {
+                src: [
+                    'assets/scss/**/*.scss',
+                ],
+                dest: '../www/web/styling/main.scss',
+            }
+        },
+
+        sass: {
+            dist: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    '../www/web/styling/main.css': '../www/web/styling/main.scss',
+                }
+            }
+        },
+
         // Make basic Copies out of node_modules to WWW
         copy: {
             dist: {
@@ -36,6 +45,7 @@ module.exports = function(grunt) {
                     {src: ['assets/php/index.php'], dest: '../www/web/php/index.php'},
                     // Bootstrap
                     {src: ['node_modules/bootstrap/dist/css/bootstrap.min.css'], dest: '../www/web/styling/vendor/bootstrap.min.css'},
+                    {src: ['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'], dest: '../www/web/js/vendor/bootstrap.bundle.min.js'},
                     {src: ['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'], dest: '../www/web/js/vendor/bootstrap.bundle.min.js'},
                     // jQuery
                     {src: ['node_modules/jquery/dist/jquery.min.js'], dest: '../www/web/js/vendor/jquery.min.js'},
@@ -132,7 +142,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-babel');
 
     // Dist
-    grunt.registerTask('dist', ["babel", "sass", "uglify", "htmlmin", "cssmin", "copy"]);
+    grunt.registerTask('dist', ["copy", "babel", "concat", "sass", "uglify", "htmlmin", "cssmin"]);
     // Watch
     grunt.registerTask("w", ["watch"]);
 };

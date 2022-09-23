@@ -1,8 +1,8 @@
 # Project Initiation:
 init:
 	@make d-rm
-	@make dependencies
 	@make d-compose
+	@make dependencies
 	@make start
 
 start:
@@ -19,6 +19,8 @@ restart:
 	@docker-compose stop
 	@make start
 
+clear-cache:
+	rm ~/.config/google-chrome/Default/
 
 # Connect:
 ssh:
