@@ -8,6 +8,7 @@
 // Log-In
 #inner-frame {
   width: 400px;
+  transition: height 2s, width 2s;
 
   #content-head {
 
@@ -30,6 +31,13 @@
 
   #content-main {
     margin: 15px;
+    label {
+      line-height: 0px;
+    }
+    input {
+      margin-bottom: 25px;
+    }
+
     #remember {
       margin-top: 10px;
     }

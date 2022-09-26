@@ -41,8 +41,11 @@ module.exports = function(grunt) {
         copy: {
             dist: {
                 files: [
-                    // PHP Classes
+                    // PHP
                     {cwd: 'assets/Classes', src: ['**/*'], dest: '../www/web/Classes/', expand: true},
+                    {cwd: 'assets/control', src: ['**/*'], dest: '../www/web/control/', expand: true},
+                    {cwd: 'assets/data', src: ['**/*'], dest: '../www/web/data/', expand: true},
+
                     // Bootstrap
                     {src: ['node_modules/bootstrap/dist/css/bootstrap.min.css'], dest: '../www/web/styling/vendor/bootstrap.min.css'},
                     {src: ['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'], dest: '../www/web/js/vendor/bootstrap.bundle.min.js'},

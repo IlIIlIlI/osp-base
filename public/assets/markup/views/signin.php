@@ -1,3 +1,7 @@
+<?php
+include 'data/db-connection.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,9 +10,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="styling/vendor/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styling/vendor/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <!-- Main Styling -->
-        <link rel="stylesheet" href="styling/main.min.css">
+        <link rel="stylesheet" href="../styling/main.min.css">
 
         <title>GSO - NAP Quizzes - Login</title>
     </head>
@@ -23,13 +27,13 @@
             </div>
 
             <div id="content-main">
-                <form class="login-signup">
+                <form class="login-signup" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">GSO Addresse</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1"><p>GSO Addresse: <?php echo $reqErrorEmail; ?></p></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Deine GSO Adresse hier!" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Passwort</label>
+                        <label for="exampleInputPassword1"><p>Passwort <?php echo $reqErrorPW; ?></p></label>
                         <input type="password" class="form-control" id="exampleInputPassword1">
                         <small id="emailHelp" class="form-text text-muted">Teile dein Passwort niemals mit anderen.</small>
                     </div>
@@ -39,6 +43,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Sign In</button>
                 </form>
+                <?php echo $success; ?>
             </div>
         </div>
     </body>

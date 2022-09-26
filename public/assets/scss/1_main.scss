@@ -57,5 +57,11 @@ body {
         }
       }
     }
+
+    #content-main {
+      h1, p {
+        text-align: justify;
+      }
+    }
   }
 }
