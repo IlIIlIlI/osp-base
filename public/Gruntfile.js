@@ -41,8 +41,8 @@ module.exports = function(grunt) {
         copy: {
             dist: {
                 files: [
-                    // PHP Unminified
-                    {src: ['assets/php/*.php'], dest: '../www/web/php/index.php'},
+                    // PHP Classes
+                    {cwd: 'assets/Classes', src: ['**/*'], dest: '../www/web/Classes/', expand: true},
                     // Bootstrap
                     {src: ['node_modules/bootstrap/dist/css/bootstrap.min.css'], dest: '../www/web/styling/vendor/bootstrap.min.css'},
                     {src: ['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'], dest: '../www/web/js/vendor/bootstrap.bundle.min.js'},
@@ -74,6 +74,18 @@ module.exports = function(grunt) {
                   dest: '../www/web/'
                 }]
             },
+            distphp: {
+                options: {
+                    removeComments: true,
+                    collapseWhitespace: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'assets/markup/views',
+                    src: ['**/*.php'],
+                    dest: '../www/web/views/'
+                }]
+            }
         },
 
         // CSS Minification
@@ -121,6 +133,16 @@ module.exports = function(grunt) {
             html: {
                 files: ['assets/markup/**/*.html'],
                 tasks: ['htmlmin:disthtml'],
+                options: {
+                    debounceDelay: 1000,
+                    spawn: false,
+                    watchTask: true
+                },
+            },
+            // Uglify all PHP-Views after every Change
+            php: {
+                files: ['assets/markup/views/**/*.php'],
+                tasks: ['htmlmin:distphp'],
                 options: {
                     debounceDelay: 1000,
                     spawn: false,
